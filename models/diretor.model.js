@@ -1,28 +1,24 @@
-const {DataTypes} = require('sequelize');
+const { DataTypes } = require('sequelize');
 const sequelize = require('../config/bd');
 
 const Diretor = sequelize.define(
-    'Diretor',
-    {
-        nome: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-
-        anoNascimento: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-
-        atv: {
-            type: DataTypes.BOOLEAN,
-        allowNull: false
-        }
+  'Diretor',
+  {
+    nome: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
-    {
-        tableName: 'Diretores',
-        timestamps: true
+    anoNascimento: {
+      type: DataTypes.INTEGER
+    },
+    nacionalidade: {
+      type: DataTypes.STRING
     }
+  },
+  {
+    tableName: 'Diretores',
+    timestamps: true
+  }
 );
 
 module.exports = Diretor;
