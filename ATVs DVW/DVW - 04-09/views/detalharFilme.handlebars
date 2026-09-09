@@ -1,0 +1,30 @@
+<h1>{{filme.nome}} ({{filme.ano}})</h1>
+
+<h2>Ficha Técnica</h2>
+{{#if filme.fichaTecnica}}
+  <ul>
+    <li>Duração: {{filme.fichaTecnica.duracaoMinutos}} minutos</li>
+    <li>Orçamento: {{filme.fichaTecnica.orcamento}}</li>
+    <li>Bilheteria: {{filme.fichaTecnica.bilheteria}}</li>
+  </ul>
+{{else}}
+  <a href="/filmes/{{filme.id}}/ficha-tecnica/cadastrar">Cadastrar ficha técnica</a>
+{{/if}}
+
+<h2>Diretor</h2>
+{{#if filme.diretor}}
+  <a href="/diretores/{{filme.diretor.id}}">{{filme.diretor.nome}}</a>
+{{else}}
+  <p>Diretor não informado.</p>
+{{/if}}
+
+<h2>Elenco</h2>
+{{#if filme.artistas}}
+  <ul>
+    {{#each filme.artistas}}
+      <li><a href="/artistas/{{id}}">{{nome}}</a></li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>Nenhum artista cadastrado.</p>
+{{/if}}

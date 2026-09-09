@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Listar Roupas</title>
+    <style>
+        div{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Listar Roupas</h1>
+
+    {{#each roupas}}
+        <div>
+            {{this}}
+        </div>
+    {{/each}}
+</body>
+</html>
