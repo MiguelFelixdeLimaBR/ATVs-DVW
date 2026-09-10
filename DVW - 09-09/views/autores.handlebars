@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<h1>Lista de Autores</h1>
+
+<a href="/autores/cadastrar">
+  Cadastrar Autor
+</a>
+
+<hr>
+
+<ul>
+
+  {{#each autores}}
+
+    <li>
+    
+      <a href='/autores/{{this.id}}'>{{this.nome}} </a>
+
+    </li>
+
+  {{/each}}
+
+</ul>

@@ -1,0 +1,12 @@
+<h1>Nome: {{livro.titulo}}</h1>
+
+<h2>Categorias:</h2>
+{{#if livro.categorias}}
+  <ul>
+    {{#each livro.categorias}}
+      <li>{{this.nome}}</li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>Nenhuma categoria cadastrada.</p>
+{{/if}}

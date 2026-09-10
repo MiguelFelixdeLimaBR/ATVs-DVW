@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<h1>Lista de Pessoas</h1>
+
+<a href="/pessoas/cadastrar">
+  Cadastrar Pessoa
+</a>
+
+<hr>
+
+<ul>
+
+  {{#each pessoas}}
+
+    <li>
+    
+      <a href='/pessoas/{{this.id}}'>{{this.nome}} </a>
+
+    </li>
+
+  {{/each}}
+
+</ul>

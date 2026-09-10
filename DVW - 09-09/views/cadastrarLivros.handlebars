@@ -1,0 +1,39 @@
+<h1>Cadastrar Livro</h1>
+
+<form action="/livros/cadastrar" method="POST">
+
+  <div>
+    <label>Título:</label>
+    <input type="text" name="titulo" required>
+  </div>
+  <br>
+
+  <div>
+    <label>Ano de Publicação:</label>
+    <input type="number" name="anoPublicacao" required>
+  </div>
+  <br>
+
+  <div>
+    <label>Autor:</label>
+    <select name="autorId" required>
+      <option value="">Selecione um autor</option>
+      {{#each autores}}
+        <option value="{{id}}">{{nome}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <br>
+
+  <div>
+    <label>Categorias:</label>
+    <select name="categorias" multiple required>
+      {{#each categorias}}
+        <option value="{{id}}">{{nome}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <button type="submit">Salvar</button>
+
+</form>

@@ -1,0 +1,11 @@
+<h1>Nome: {{pessoa.nome}}</h1>
+
+<h2>Passaporte:</h2>
+{{#if pessoa.passaporte}}
+  <ul>
+    <li>Número: {{pessoa.passaporte.numero}}</li>
+    <li>Validade: {{pessoa.passaporte.validade}}</li>
+  </ul>
+{{else}}
+  <p>Passaporte não informado.</p>
+{{/if}}
